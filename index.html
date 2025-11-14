@@ -3,132 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Barbearia do Padre — Desde 1977</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style2.css">
+  <title>Barbearia do Padre — barbeariadopadre.top</title>
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="home">
-    <nav class="navbar">
+  <header class="site-header">
+    <nav class="navbar" role="navigation" aria-label="Principal">
       <div class="brand">
-        <a href="#home" class="logo-link">BARBEARIA DO PADRE</a>
+        <a href="#home" class="logo-link">Barbearia do Padre</a>
       </div>
 
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label">☰</label>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">☰</label>
 
       <ul class="nav-links">
-        <li><a href="#home">Início</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#corte-barba">Corte & Barba</a></li>
-        <li><a href="#proteses">Próteses</a></li>
+        <li><a href="#proteses">Próteses Capilares</a></li>
         <li><a href="#galeria">Galeria</a></li>
         <li><a href="#contato" class="cta">Agendar</a></li>
       </ul>
     </nav>
 
-    <!-- HERO -->
-    <div class="hero">
+    <div class="hero" id="home" role="region" aria-label="Hero">
       <div class="hero-overlay"></div>
-
       <div class="hero-content">
         <h1 class="hero-title">Barbearia do Padre</h1>
-        <p class="hero-subtitle">Tradição & Estilo desde 1977</p>
-        <a href="#contato" class="btn btn-hero">Agendar Agora</a>
+        <p class="hero-subtitle">Tradição desde 1977 — cortes, barba e próteses capilares com qualidade.</p>
+        <a href="#contato" class="btn btn-hero">Agende pelo WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <!-- ===================== CORTE & BARBA ===================== -->
   <main>
-    <section id="corte-barba" class="section fade-section">
-      <h2 class="section-title">Corte & Barba</h2>
-      <p class="section-desc">Conheça um pouco do nosso trabalho e sinta a experiência da Barbearia do Padre.</p>
-
+    <section id="corte-barba" class="section">
+      <h2>Corte & Barba</h2>
+      <p>Veja abaixo algumas imagens do nosso trabalho e um tour pela barbearia.</p>
       <div class="gallery">
-        <figure><img src="assets/img1.jpg" alt=""></figure>
-        <figure><img src="assets/img2.jpg" alt=""></figure>
-        <figure><img src="assets/img3.jpg" alt=""></figure>
-        <figure><img src="assets/img4.jpg" alt=""></figure>
-        <figure><img src="assets/img5.jpg" alt=""></figure>
-        <figure><img src="assets/img6.jpg" alt=""></figure>
-        <figure><img src="assets/img7.jpg" alt=""></figure>
-        <figure><img src="assets/img8.jpg" alt=""></figure>
-        <figure><img src="assets/img9.jpg" alt=""></figure>
-        <figure><img src="assets/img10.jpg" alt=""></figure>
+        <figure><img src="assets/img1.jpg" alt="Foto 1"></figure>
+        <figure><img src="assets/img2.jpg" alt="Foto 2"></figure>
+        <figure><img src="assets/img3.jpg" alt="Foto 3"></figure>
+        <figure><img src="assets/img4.jpg" alt="Foto 4"></figure>
+        <figure><img src="assets/img5.jpg" alt="Foto 5"></figure>
+        <figure><img src="assets/img6.jpg" alt="Foto 6"></figure>
+        <figure><img src="assets/img7.jpg" alt="Foto 7"></figure>
+        <figure><img src="assets/img8.jpg" alt="Foto 8"></figure>
+        <figure><img src="assets/img9.jpg" alt="Foto 9"></figure>
+        <figure><img src="assets/img10.jpg" alt="Foto 10"></figure>
       </div>
 
       <div class="video-tour">
-        <h3 class="video-title">Tour pela Barbearia</h3>
-        <video controls class="tour-video" poster="assets/video_poster.jpg">
+        <h3>Tour pela Barbearia</h3>
+        <video controls poster="assets/video_poster.jpg" class="tour-video" preload="metadata">
           <source src="assets/tour.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo HTML5.
         </video>
       </div>
     </section>
 
-    <!-- ===================== PRÓTESES ===================== -->
-    <section id="proteses" class="section alt fade-section">
-      <h2 class="section-title">Próteses Capilares</h2>
-      <p class="section-desc">Especialistas em próteses capilares masculinas — atendimento individualizado.</p>
-
-      <a class="btn-secondary" target="_blank"
-         href="https://wa.me/5551994124525?text=Ol%C3%A1%20Roberto,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20pr%C3%B3teses">
-         Falar com Roberto
-      </a>
+    <section id="proteses" class="section alt">
+      <h2>Próteses Capilares</h2>
+      <p>Nossa equipe especializada em próteses capilares — fale com Roberto.</p>
+      <a class="btn-secondary" href="https://wa.me/5551994124525?text=Ol%C3%A1%20Roberto%2C%20gostaria%20de%20informacoes%20sobre%20proteses%20capilares" target="_blank" rel="noopener">Contato Roberto</a>
 
       <div class="gallery">
-        <figure><img src="assets/img11.jpg"></figure>
-        <figure><img src="assets/img12.jpg"></figure>
-        <figure><img src="assets/img13.jpg"></figure>
-        <figure><img src="assets/img14.jpg"></figure>
-        <figure><img src="assets/img15.jpg"></figure>
-        <figure><img src="assets/img16.jpg"></figure>
-        <figure><img src="assets/img17.jpg"></figure>
-        <figure><img src="assets/img18.jpg"></figure>
-        <figure><img src="assets/img19.jpg"></figure>
-        <figure><img src="assets/img20.jpg"></figure>
+        <figure><img src="assets/img11.jpg" alt="Prótese 1"></figure>
+        <figure><img src="assets/img12.jpg" alt="Prótese 2"></figure>
+        <figure><img src="assets/img13.jpg" alt="Prótese 3"></figure>
+        <figure><img src="assets/img14.jpg" alt="Prótese 4"></figure>
+        <figure><img src="assets/img15.jpg" alt="Prótese 5"></figure>
+        <figure><img src="assets/img16.jpg" alt="Prótese 6"></figure>
+        <figure><img src="assets/img17.jpg" alt="Prótese 7"></figure>
+        <figure><img src="assets/img18.jpg" alt="Prótese 8"></figure>
+        <figure><img src="assets/img19.jpg" alt="Prótese 9"></figure>
+        <figure><img src="assets/img20.jpg" alt="Prótese 10"></figure>
       </div>
 
-      <div class="video-grid">
-        <div class="video-small">
-          <video controls poster="assets/video_poster.jpg">
-            <source src="assets/tour.mp4" type="video/mp4">
-          </video>
-          <p>Aplicação</p>
-        </div>
-        <div class="video-small">
-          <video controls poster="assets/video_poster.jpg">
-            <source src="assets/tour.mp4" type="video/mp4">
-          </video>
-          <p>Resultado</p>
+      <div class="videos-proteses">
+        <p>Vídeos e depoimentos (substitua pelos arquivos reais)</p>
+        <div class="video-grid">
+          <div class="video-small">
+            <video controls poster="assets/video_poster.jpg" preload="metadata"><source src="assets/tour.mp4" type="video/mp4"></video>
+            <p>Aplicação</p>
+          </div>
+          <div class="video-small">
+            <video controls poster="assets/video_poster.jpg" preload="metadata"><source src="assets/tour.mp4" type="video/mp4"></video>
+            <p>Resultado</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== GALERIA ===================== -->
-    <section id="galeria" class="section fade-section">
-      <h2 class="section-title">Galeria & História</h2>
-      <p class="section-desc">Desde 1977 trazendo tradição, qualidade e atendimento premium.</p>
-
+    <section id="galeria" class="section">
+      <h2>Galeria & História</h2>
+      <p>Fundada em 1977, a Barbearia do Padre preserva técnicas tradicionais com modernidade.</p>
       <div class="gallery">
-        <figure><img src="assets/img21.jpg"></figure>
-        <figure><img src="assets/img22.jpg"></figure>
-        <figure><img src="assets/img23.jpg"></figure>
-        <figure><img src="assets/img24.jpg"></figure>
-        <figure><img src="assets/img25.jpg"></figure>
-        <figure><img src="assets/img26.jpg"></figure>
+        <figure><img src="assets/img21.jpg" alt="Galeria 1"></figure>
+        <figure><img src="assets/img22.jpg" alt="Galeria 2"></figure>
+        <figure><img src="assets/img23.jpg" alt="Galeria 3"></figure>
+        <figure><img src="assets/img24.jpg" alt="Galeria 4"></figure>
+        <figure><img src="assets/img25.jpg" alt="Galeria 5"></figure>
+        <figure><img src="assets/img26.jpg" alt="Galeria 6"></figure>
       </div>
     </section>
 
-    <!-- ===================== AGENDAMENTO ===================== -->
-    <section id="contato" class="section alt fade-section">
-      <h2 class="section-title">Agendamento</h2>
-      <p class="section-desc">Selecione o serviço e o profissional — o WhatsApp abrirá automaticamente.</p>
-
+    <section id="contato" class="section contact-section">
+      <h2>Contato / Agendamento</h2>
+      <p>Escolha o serviço e o profissional — abriremos o WhatsApp com mensagem pronta.</p>
       <form id="waForm" onsubmit="return openWhatsApp()">
-
         <div class="form-row">
           <label>Serviço
             <select id="servico">
@@ -151,7 +134,7 @@
 
         <div class="form-row">
           <label>Data / Preferência
-            <input id="preferencia" type="text" placeholder="Ex: Amanhã às 15:00">
+            <input type="text" id="preferencia" placeholder="Ex: Amanhã às 15:00">
           </label>
         </div>
 
@@ -161,40 +144,31 @@
           </label>
         </div>
 
-        <button type="submit" class="btn w-100">Enviar pelo WhatsApp</button>
-
+        <button type="submit" class="btn">Abrir WhatsApp</button>
       </form>
     </section>
   </main>
 
-  <!-- ===================== RODAPÉ ===================== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
         <h4>Endereço</h4>
-        <p>Avenida Senador Salgado Filho, 3885<br>Viamão - RS</p>
+        <p>Avenida senador salgado filho, 3885, Viamão - RS</p>
       </div>
-
       <div>
         <h4>Horário</h4>
         <p>Seg-Sex 09:00 - 20:00<br>Sáb 09:00 - 14:00</p>
       </div>
-
       <div>
-        <h4>Localização</h4>
+        <h4>Mapa</h4>
         <iframe
           src="https://www.google.com/maps?q=Avenida+senador+salgado+filho+3885+Viam%C3%A3o+RS&output=embed"
-          loading="lazy">
-        </iframe>
+          style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
-
-    <div class="copyright">
-      © Barbearia do Padre — Desde 1977
-    </div>
+    <div class="copyright">© Barbearia do Padre — desde 1977</div>
   </footer>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
