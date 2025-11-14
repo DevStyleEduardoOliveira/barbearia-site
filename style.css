@@ -1,73 +1,137 @@
-
-/* style.css - Barbearia do Padre (tema claro com predominância amarela) */
-:root{
-  --yellow:#ffd54a;
-  --dark:#222;
-  --muted:#666;
-  --bg:#fffbe8;
-  --glass: rgba(255,255,255,0.6);
-}
-*{box-sizing:border-box}
-body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
-.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(90deg,var(--yellow),#fff);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(0,0,0,0.05)}
-.brand{display:flex;align-items:center}
-.brand .logo-link{display:block;padding:8px 16px;background-image:url('assets/logo.png');background-size:contain;background-repeat:no-repeat;background-position:left center;padding-left:220px;font-weight:700}
-.nav-links{list-style:none;margin:0;display:flex;gap:12px;align-items:center}
-.nav-links li a{color:var(--dark);text-decoration:none;padding:8px 12px;border-radius:6px}
-.nav-links li a.cta{background:var(--dark);color:#fff}
-.nav-toggle{display:none}
-.nav-toggle-label{display:none}
-
-/* responsive nav */
-@media(max-width:800px){
-  .nav-links{position:fixed;right:0;top:64px;background:rgba(255,255,255,0.98);flex-direction:column;padding:12px;border-left:1px solid rgba(0,0,0,0.05);display:none;width:220px;height:calc(100% - 64px)}
-  .nav-toggle:checked + .nav-toggle-label + .nav-links{display:flex}
-  .nav-toggle-label{display:block;cursor:pointer;padding:8px 12px}
-  .brand .logo-link{padding-left:80px;background-size:140px 40px}
+/* ==========================
+   RESET / CONFIGURAÇÃO BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-/* hero */
-.hero{height:380px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,213,79,0.12), rgba(255,235,120,0.06)), url('assets/img1.jpg');background-size:cover;background-position:center;position:relative}
-.hero-content{background:var(--glass);backdrop-filter:blur(4px);padding:24px;border-radius:14px;text-align:center;max-width:880px;animation:fadeInUp .9s ease}
-.hero h1{margin:0;font-size:38px}
-.hero p{color:var(--muted);margin:8px 0 16px}
-.btn{display:inline-block;background:var(--dark);color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none}
-.btn-secondary{display:inline-block;background:transparent;border:2px solid var(--dark);padding:8px 12px;border-radius:8px;text-decoration:none}
-
-/* sections */
-.section{padding:40px 20px;max-width:1100px;margin:0 auto}
-.section.alt{background:linear-gradient(180deg,#fff,#fff8e0)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
-.gallery figure{margin:0;overflow:hidden;border-radius:8px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,0.06);transform:translateY(0);transition:transform .25s ease}
-.gallery figure img{width:100%;height:180px;object-fit:cover;display:block}
-.gallery figure:hover{transform:translateY(-6px)}
-
-/* video styles */
-.video-tour{margin-top:18px}
-.tour-video{width:100%;max-width:900px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
-
-/* gallery small videos */
-.video-grid{display:flex;gap:12px;flex-wrap:wrap}
-.video-small video{width:320px;border-radius:8px}
-
-/* contact */
-.contact-section form{max-width:900px;margin:12px auto;display:block;background:#fff;padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
-.form-row{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
-.form-row label{flex:1;display:flex;flex-direction:column;font-weight:600}
-.form-row input,.form-row textarea,.form-row select{padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px}
-textarea{min-height:90px;resize:vertical}
-
-/* footer */
-.site-footer{background:#111;color:#fff;padding:24px 20px;margin-top:30px}
-.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:start}
-.site-footer iframe{width:100%;height:160px;border:0;border-radius:8px}
-.copyright{text-align:center;color:#ddd;margin-top:12px;font-size:14px}
-
-@media(max-width:900px){
-  .footer-grid{grid-template-columns:1fr}
-  .hero{height:300px}
-  .hero h1{font-size:28px}
+body {
+  background: #f8f8f8;
+  color: #333;
+  overflow-x: hidden;
 }
 
-/* animations */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+/* ==========================
+   CABEÇALHO
+========================== */
+header {
+  width: 100%;
+  background: linear-gradient(135deg, #0d0d0d, #1d1d1d);
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInDown 0.8s ease;
+}
+
+/* ==========================
+   CONTEÚDO / SESSÕES
+========================== */
+section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: fadeIn 1s ease;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all .2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+/* Botão de Enviar */
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0d0d0d;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
